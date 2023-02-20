@@ -1,5 +1,9 @@
 body {
-    margin: 2.5% 3.5% 2.5% 3.5%;
+    margin: 30px;
+}
+
+#logo-header {
+    width: 60px;
 }
 
 .header-container {
