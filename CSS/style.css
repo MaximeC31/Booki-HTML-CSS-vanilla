@@ -1,0 +1,17 @@
+body {
+    margin: 30px;
+}
+
+#logo-header {
+    width: 60px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container {
+    display: flex;
+}
