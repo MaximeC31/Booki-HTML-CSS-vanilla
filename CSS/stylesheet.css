@@ -24,6 +24,7 @@
 }
 
 body {
+    margin: auto;
     padding: 0 var(--gap);
     max-width: 1400px;
 }
