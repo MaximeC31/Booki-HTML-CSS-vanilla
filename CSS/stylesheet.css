@@ -9,10 +9,14 @@
 
 
 
+
+
 @font-face {
     font-family: Raleway;
     src: url(../media/Fonts/Raleway-VariableFont_wght.ttf);
 }
+
+
 
 
 
@@ -38,28 +42,132 @@ a:hover {
     color: var(--blue);
 }
 
-.lowGap {
+/* =====Margin===== */
+.noMargin {
+    margin: 0;
+}
+
+.classicMarginBottom {
+    margin-bottom: var(--gap);
+}
+
+.lowMarginBottom {
     margin-bottom: calc(var(--gap)/2)
 }
+
+.sLowMarginBottom {
+    margin-bottom: calc(var(--gap)/3)
+}
+
+.hightMarginBottom {
+    margin-bottom: calc(var(--gap)*2);
+}
+
+.classicMarginRight {
+    margin-right: var(--gap);
+}
+
+.lowMarginRight {
+    margin-right: calc(var(--gap)/2);
+}
+
+/* =====Padding===== */
+.noPadding {
+    padding: 0;
+}
+
+.classicPadding {
+    padding: var(--gap);
+}
+
+.lowPadding {
+    padding: calc(var(--gap)/2);
+}
+
+.sLowPadding {
+    padding: calc(var(--gap)/3);
+}
+
+.sSLowPadding {
+    padding: calc(var(--gap)/4);
+}
+
+/* =====Font===== */
+.boldFont {
+    font-weight: bold;
+}
+
+.colorBlack {
+    color: var(--black);
+}
+
+.colorGrey {
+    color: var(--grey);
+}
+
+.colorWhite {
+    color: var(--white);
+}
+
+.colorBlue {
+    color: var(--blue);
+}
+
+.colorLightBlue {
+    color: var(--lightBlue);
+}
+
+/* =====Background===== */
+.bcBlack {
+    background-color: var(--black);
+}
+
+.bcGrey {
+    background-color: var(--grey);
+}
+
+.bcWhite {
+    background-color: var(--white);
+}
+
+.bcBlue {
+    background-color: var(--blue);
+}
+
+.bcLightBlue {
+    background-color: var(--lightBlue);
+}
+
+/* =====Style===== */
+.noStyleList {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.borderRadius {
+    border-radius: var(--gap);
+}
+
+.boxShadow {
+    box-shadow: 20px 20px 33px -40px var(--black);
+}
+
+
 
 
 
 /* Spécifique header */
 header {
-    margin-bottom: var(--gap);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#headerDisableStyleList {
-    list-style: none;
-    padding: 0;
-}
-
 .headerBorder {
     display: inline-block;
-    padding: var(--gap) calc(var(--gap));
     border-top: 3px solid var(--white);
 }
 
@@ -74,27 +182,17 @@ header {
 
 
 
-/* Spécifique au corps de document */
-section {
-    margin-bottom: var(--gap);
-}
 
-/* Zone barre de recherche */
-#searchingForm {
-    display: flex;
-}
 
+/* Spécifique main */
+/* =====Zone barre de recherche===== */
 #leftPartSearchingBar {
-    background-color: var(--grey);
     border: 1px solid var(--grey);
     border-radius: calc(var(--gap)/2) 0 0 calc(var(--gap)/2);
-    padding: calc(var(--gap)/2);
 }
 
 #middlePartSearchingBar {
     border: 1px solid var(--grey);
-    padding: calc(var(--gap)/2);
-    font-weight: bold;
 }
 
 #middlePartSearchingBar::placeholder {
@@ -102,59 +200,78 @@ section {
 }
 
 #rightPartSearchingBar {
-    background-color: var(--blue);
-    color: var(--white);
-    font-weight: bold;
     border: 1px solid var(--blue);
     border-radius: 0 calc(var(--gap)/2) calc(var(--gap)/2) 0;
-    padding: calc(var(--gap)/2);
 }
 
-/* Zone des filtres */
+/* =====Zone des filtres===== */
 #filtersSection {
-    display: flex;
     align-items: center;
-}
-
-#filtersSection *:not(:last-child) {
-    margin-right: var(--gap)
 }
 
 .filtersButton {
     border: 2px solid var(--grey);
-    background-color: var(--white);
     padding: calc(var(--gap)/3) calc(var(--gap)/2);
-    border-radius: calc(var(--gap));
-    font-weight: bold;
 }
 
 .filtersButton:hover {
     background-color: var(--lightBlue);
 }
 
-.iconFiltersButton {
-    margin-right:calc(var(--gap)/2);
+.fa-circle-info {
+    color: var(--blue);
+    background-color: var(--white);
+    border-color: var(--grey);
 }
 
-.iconBlue {
-    color : var(--blue);
+/* =====Zone des cards hébergements===== */
+.leftHebergements {
+    width: 60%;
 }
+
+.leftvignette {
+    width: calc(100%/3);
+}
+
+.imgHebergements {
+    width: 250px;
+    height: 125px;
+    border-radius: var(--gap) var(--gap) 0 0;
+}
+
+/* =====Zone des cards Les plus populaires===== */
+.rightHebergements {
+    width: 40%;
+}
+
+.imgPopulaires {
+    width: 140px;
+    height: 150px;
+}
+
+/* =====Zone des cards Activités à Marseille===== */
+#cardsActivityMarseille {
+    justify-content: space-between;
+}
+
+.vignetteActivityMarseille {
+    border-radius: var(--gap);
+    box-shadow: 3px 3px 20px 0px var(--grey);
+}
+
+.imgActivity {
+    width: 300px;
+    height: 450px;
+    border-radius: var(--gap) var(--gap) 0 0;
+    object-fit: cover;
+}
+
+
 
 
 
 /* Spécifique au footer */
-footer {
-    background-color: var(--grey);
-    padding: var(--gap);
-    display: flex;
-}
-
-.footerDisableStyleList {
-    list-style: none;
-    padding: 0;
-}
-
-.footerDisableStyleList li:not(:last-child) {
+.footerLowMarginBottomNoLastChild li:not(:last-child) {
     margin-bottom: calc(var(--gap)/2);
 }
 
@@ -162,7 +279,6 @@ footer {
     width: calc(100% / 3);
 }
 
-.subtitleFooter {
-    margin-bottom: var(--gap);
-    font-weight: bold;
+.footerPadding {
+    padding: calc(var(--gap)*2) calc(var(--gap)*3) calc(var(--gap)*2) calc(var(--gap)*3);
 }
