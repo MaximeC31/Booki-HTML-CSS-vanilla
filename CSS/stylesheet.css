@@ -2,9 +2,9 @@
     --gap: 30px;
     --black: #000000;
     --white: #ffffff;
-    --grey: #F2F2F2;
-    --blue: #0065FC;
-    --lightBlue: #DEEBFF;
+    --grey: #f2f2f2;
+    --blue: #0065fc;
+    --lightBlue: #deebff;
 }
 
 @font-face {
@@ -20,16 +20,6 @@
     font-weight: 500;
     scroll-behavior: smooth;
     box-sizing: border-box;
-}
-
-a {
-    color: var(--black);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--blue);
-    cursor: pointer;
 }
 
 body {
@@ -62,6 +52,15 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: var(--gap);
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--blue);
 }
 
 /* Font variation */
@@ -123,11 +122,6 @@ footer {
     height: 20px;
 }
 
-#noUlStyleHeader {
-    list-style: none;
-    padding: 0;
-}
-
 .sameLineHeader {
     display: inline-block;
     padding: var(--gap);
@@ -136,6 +130,11 @@ footer {
 
 .sameLineHeader:hover {
     border-top: 3px solid var(--blue);
+}
+
+#noUlStyleHeader {
+    list-style: none;
+    padding: 0;
 }
 
 /* Spécifique section barre de recherche */
@@ -174,6 +173,10 @@ footer {
     border: 1px solid var(--blue);
     border-radius: 0 calc(var(--gap) / 2) calc(var(--gap) / 2) 0;
     font-weight: bold;
+}
+
+.fas.fa-search.inputFormButton {
+    display: none;
 }
 
 /* Section Filtres */
@@ -265,11 +268,10 @@ footer {
     gap: 6px;
 }
 
-#topPopularSubDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.imgHebergements {
+    height: 125px;
+    width: 100%;
+    object-fit: cover;
 }
 
 #rightDivPart {
@@ -280,6 +282,13 @@ footer {
     display: flex;
     flex-direction: column;
     gap: var(--gap);
+}
+
+#topPopularSubDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #rightLittleDivPart {
@@ -295,18 +304,9 @@ footer {
     border: 4px solid var(--white);
 }
 
-.rightInsideArticle {
+.insideArticle {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
-    width: 60%;
-}
-
-.imgHebergements {
-    height: 125px;
-    width: 100%;
-    object-fit: cover;
+    flex-direction: row;
 }
 
 .imgPopular {
@@ -315,15 +315,18 @@ footer {
     object-fit: cover;
 }
 
+.rightInsideArticle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    width: 60%;
+}
+
 .textInsideRightArticle {
     display: flex;
     flex-direction: column;
     gap: 6px;
-}
-
-.insideArticle {
-    display: flex;
-    flex-direction: row;
 }
 
 /* Activity */
@@ -373,12 +376,7 @@ footer {
     gap: calc(var(--gap) / 3);
 }
 
-.fas.fa-search.inputFormButton {
-    display: none;
-}
-
 @media screen and (min-width: 768px) and (max-width: 991px) {
-
     .buttonsFilter {
         padding: 10px;
         border-radius: calc(var(--gap));
@@ -415,6 +413,41 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
+    section:not(:last-child) {
+        margin-bottom: var(--gap);
+    }
+
+    header {
+        padding-top: 15px;
+        flex-direction: column;
+    }
+
+    .sameLineHeader:hover {
+        border-bottom: 3px solid var(--blue);
+        border-top: none;
+    }
+
+    .sameLineHeader {
+        display: inline-block;
+        padding: 30px 00;
+        border-bottom: 3px solid var(--grey);
+    }
+
+    #noUlStyleHeader {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    #navStyle {
+        width: 100vw;
+    }
+
+    .mobileLiFormat {
+        width: 50%;
+        text-align: center;
+    }
+
     .fas.fa-search.inputFormButton {
         display: block;
     }
@@ -445,14 +478,6 @@ footer {
 
     #noDisplayText {
         display: none;
-    }
-
-    section:not(:last-child) {
-        margin-bottom: var(--gap);
-    }
-
-    #navStyle {
-        width: 100vw;
     }
 
     #filtersPart {
@@ -569,33 +594,6 @@ footer {
 
     .columnsFooter {
         width: 100%;
-    }
-
-    header {
-        padding-top: 15px;
-        flex-direction: column;
-    }
-
-    .mobileLiFormat {
-        width: 50%;
-        text-align: center;
-    }
-
-    .sameLineHeader:hover {
-        border-bottom: 3px solid var(--blue);
-        border-top: none;
-    }
-
-    .sameLineHeader {
-        display: inline-block;
-        padding: 30px 00;
-        border-bottom: 3px solid var(--grey);
-    }
-
-    #noUlStyleHeader {
-        display: flex;
-    flex-direction: row;
-    padding: 0;
     }
 
 }
